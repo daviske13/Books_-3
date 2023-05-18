@@ -16,15 +16,14 @@ export const LOGIN_USER = gql`
     }
 ';
 
-export const GET_USER = gql`
-    query GetUser($userId: ID!) 
-    {
-        getUser(userId: $userId)
-
-        {
-            id
-            username
-            email
-        }
-    }
-`;
+// export const GET_USER = gql`
+// {
+//     GetUser($userId: ID!) {
+//         getUser(userId: $userId) {
+//           id
+//           username
+//           email
+//         }
+//       }
+// }
+// `;

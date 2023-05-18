@@ -1,5 +1,5 @@
 import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../../utils/mutations';
+import { LOGIN_USER } from '../utils/mutations';
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { gql } from '@apollo/client'; // Added import for gql
@@ -95,25 +95,25 @@ const LoginForm = () => {
 export default LoginForm;
 
 // Added LOGIN_USER and GET_USER constants
-export const LOGIN_USER = gql`
-  mutation LoginUser($email: String!, $password: String!) {
-    loginUser(email: $email, password: $password) {
-      token
-      user {
-        id
-        username
-        email
-      }
-    }
-  }
-`;
+// export const LOGIN_USER = gql`
+//   mutation LoginUser($email: String!, $password: String!) {
+//     loginUser(email: $email, password: $password) {
+//       token
+//       user {
+//         id
+//         username
+//         email
+//       }
+//     }
+//   }
+// `;
 
-export const GET_USER = gql`
-  query GetUser($userId: ID!) {
-    getUser(userId: $userId) {
-      id
-      username
-      email
-    }
-  }
-`;
+// export const GET_USER = gql`
+//   query GetUser($userId: ID!) {
+//     getUser(userId: $userId) {
+//       id
+//       username
+//       email
+//     }
+//   }
+// `;
